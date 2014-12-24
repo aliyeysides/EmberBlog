@@ -16,14 +16,14 @@ App.Router.map(function() {
 // 	// define logic and decorate front end
 // })
 
-App.BlogsIndexController = Ember.Controller.extend({
+App.BlogsController = Ember.ArrayController.extend({
 	test: 1,
 	recentBlog: function(){
 		return App.BLOGS.last().title;
 	}.property()
 })
 
-App.IndexProjectsController = Ember.Controller.extend({
+App.ProjectsController = Ember.ArrayController.extend({
 	test: 2,
 	recentProject: function(){
 		return App.PROJECTS.last().name;
@@ -72,6 +72,10 @@ App.PROJECTS = [{
 	description: "it's a site n stuff",
 	builtWith: "rails"
 }]
+
+// App.ABOUT = {
+// 	summary: "blah"
+// }
 
 // Extensions
 Array.prototype.last = function() {
