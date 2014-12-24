@@ -3,17 +3,32 @@ App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-	this.route('index', {path: '/'}, function(){
+	this.resource('index', {path: '/'}, function(){
+		this.resource('blogs');
+		this.resource('about');
 		this.resource('blog', {path: '/:title'});
+		this.resource('projects');
 		this.resource('project', {path: '/:name'});
 	})
-	this.resource('blogs');
-	this.resource('projects');
 });
 
 // App.AboutController = Ember.Controller.extend({
 // 	// define logic and decorate front end
 // })
+
+App.BlogsIndexController = Ember.Controller.extend({
+	test: 1,
+	recentBlog: function(){
+		return App.BLOGS.last().title;
+	}.property()
+})
+
+App.IndexProjectsController = Ember.Controller.extend({
+	test: 2,
+	recentProject: function(){
+		return App.PROJECTS.last().name;
+	}.property()
+})
 
 App.BlogsRoute = Ember.Route.extend({
   model: function() {
@@ -57,3 +72,8 @@ App.PROJECTS = [{
 	description: "it's a site n stuff",
 	builtWith: "rails"
 }]
+
+// Extensions
+Array.prototype.last = function() {
+    return this[this.length-1];
+}
