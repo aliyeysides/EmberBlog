@@ -3,7 +3,8 @@ App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-	this.resource('index', {path: '/'}, function(){
+	this.resource('home', {path: '/'});
+	this.resource('navbar', function(){
 		this.resource('blogs');
 		this.resource('about');
 		this.resource('blog', {path: '/:title'});
@@ -27,6 +28,15 @@ App.ProjectsController = Ember.ArrayController.extend({
 	test: 2,
 	recentProject: function(){
 		return App.PROJECTS.last().name;
+	}.property()
+})
+
+App.HomeController = Ember.ArrayController.extend({
+	recentProject: function(){
+		return App.PROJECTS.last().name;
+	}.property(),
+	recentBlog: function(){
+		return App.BLOGS.last().title;
 	}.property()
 })
 
