@@ -2,3 +2,12 @@
 .ember-application {
     margin: 20px;
 }
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	background: rgb(61, 79, 93);
+	color: #fff;
+	float: left;
+}

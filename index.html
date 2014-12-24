@@ -11,13 +11,12 @@
 </head>
 <body>
   <script type="text/x-handlebars">
-    <div class="pure-g">
-      <div class="pure-u-1-3"><h1>Ali Yeysides</h1>
+    <div class="layout" class="pure-g">
+      <h1>Ali Yeysides</h1>
       {{#link-to 'index'}}home{{/link-to}}
       {{#link-to 'blogs'}}blogs{{/link-to}}
-      </div>
-    </div>
-    {{outlet}}
+
+      {{outlet}}
   </script>
 
   <script type="text/x-handlebars" id="blogs">
@@ -26,13 +25,12 @@
       {{#link-to 'blog' this }}{{title}}{{/link-to}}
     {{/each}}
     </ul>
+    {{outlet}}
   </script>
 
   <script type="text/x-handlebars" id="blog">
-  {{#each}}
     <h3>{{title}}</h3>
     <p>{{body}}</p>
-  {{/each}}
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
