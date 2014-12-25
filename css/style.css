@@ -18,3 +18,23 @@
   -o-transform:translate(0px,-10px);
   transform:translate(0px,-10px);
 }
+
+.header:hover {
+	text-decoration: none !important;
+}
+
+.header {
+	color: #304650;
+}
+
+i:hover {
+	color: #304650;
+}
+
+.button-blue-outline:hover {
+	background-color: #304650 !important;
+}
+
+h1 h2 h3 {
+	color: #304650;
+}
