@@ -36,5 +36,17 @@ i:hover {
 }
 
 h1 h2 h3 {
-	color: #304650;
+	color: #304650 !important;
+}
+
+.article {
+	color: #304650 !important;
+}
+
+.article:hover {
+	opacity: 0.7 !important;
+}
+
+.article-details {
+	margin-top: -15px !important;
 }

@@ -68,12 +68,18 @@
     <h1>Writing</h1>
     <div>
       Recent Post:
-        {{#link-to 'blog'}}{{recentBlog}}{{/link-to}} "-" {{test}}
+        {{#link-to 'blog' recentBlog}}{{recentBlog}}{{/link-to}} "-" {{test}}
     </div>
 
-    <ul>
+    <ul class="list-reset">
     {{#each}}
-      <li>{{#link-to 'blog' this class="mid-gray"}}{{title}}{{/link-to}}</li>
+      <li>
+        <h3>{{#link-to 'blog' this class="dark-gray article"}}{{title}}{{/link-to}}
+        </h3>
+        <div class="article-details mid-gray">
+          {{date}}
+        </div>
+      </li>
     {{/each}}
     </ul>
   </script>
@@ -86,10 +92,7 @@
 
   <script type="text/x-handlebars" id="projects">
     <h1>Projects</h1>
-    <div>
-      Recent Work:
-        {{recentProject}} "-" {{test}}
-    </div>
+
     <ul>
     {{#each}}
       <li>{{#link-to 'project' this class="mid-gray"}}{{name}}{{/link-to}}</li>
