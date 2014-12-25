@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/4.1.7/basscss.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
@@ -14,13 +15,13 @@
   <script type="text/x-handlebars" id="home">
     <div class="clearfix">
       <div class="sm-col sm-col-6 md-col-5 lg-col-3 px2 border-right center nav-bar">
-        <img class="circle" height="50%" width="50%" src="css/img/headshot.jpg"/>
+        <img class="circle py2" height="50%" width="50%" src="css/img/headshot.jpg"/>
         {{#link-to 'home'}}<h1>Ali Yeysides</h1>{{/link-to}}
-        {{#link-to 'about' tagName="button" class="button-blue-outline mb1"}}about{{/link-to}}
-        {{#link-to 'blogs' tagName="button" class="button-blue-outline mb1"}}blogs{{/link-to}}
-        {{#link-to 'projects' tagName="button" class="button-blue-outline mb1"}}projects{{/link-to}}
+        {{#link-to 'about' tagName="button" class="button-blue-outline mb1"}}About{{/link-to}}
+        {{#link-to 'blogs' tagName="button" class="button-blue-outline mb1"}}Writing{{/link-to}}
+        {{#link-to 'projects' tagName="button" class="button-blue-outline mb1"}}Projects{{/link-to}}
       </div>
-      <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2 py3">
+      <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2 py1">
         {{recentBlog}}
         {{recentProject}}
         {{outlet}}
@@ -31,13 +32,13 @@
   <script type="text/x-handlebars" id="navbar">
     <div class="clearfix">
       <div class="sm-col sm-col-6 md-col-5 lg-col-3 px2 border-right center nav-bar">
-        <img class="circle" height="50%" width="50%" src="css/img/headshot.jpg"/>
+        <img class="circle py2" height="50%" width="50%" src="css/img/headshot.jpg"/>
         {{#link-to 'home'}}<h1>Ali Yeysides</h1>{{/link-to}}
         {{#link-to 'about'tagName="button" class="button-blue-outline mb1" }}About{{/link-to}}
         {{#link-to 'blogs' tagName="button" class="button-blue-outline mb1"}}Writing{{/link-to}}
         {{#link-to 'projects' tagName="button" class="button-blue-outline mb1"}}Projects{{/link-to}}
       </div>
-      <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2 py3">
+      <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2 py1">
         {{outlet}}
       </div>
     </div>
@@ -45,10 +46,12 @@
 
 
   <script type="text/x-handlebars" id="about">
-    <span class="mid-gray">about me yo</span>
+    <h1>About Me</h1>
+    <span class="mid-gray py2">about me yo</span>
   </script>
 
   <script type="text/x-handlebars" id="blogs">
+    <h1>Writing</h1>
     <div>
       Recent Post:
         {{#link-to 'blog'}}{{recentBlog}}{{/link-to}} "-" {{test}}
@@ -62,11 +65,13 @@
   </script>
 
   <script type="text/x-handlebars" id="blog">
+    <h1>{{title}}</h1>
     <h3>{{title}}</h3>
     <p>{{body}}</p>
   </script>
 
   <script type="text/x-handlebars" id="projects">
+    <h1>Projects</h1>
     <div>
       Recent Work:
         {{recentProject}} "-" {{test}}

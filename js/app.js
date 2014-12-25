@@ -91,3 +91,12 @@ App.PROJECTS = [{
 Array.prototype.last = function() {
     return this[this.length-1];
 }
+
+// Jquery
+$(document).ready(function(){
+	var id = $()
+	$().on('click', function(){
+
+	})
+
+})
