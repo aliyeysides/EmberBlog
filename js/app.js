@@ -66,11 +66,13 @@ App.BLOGS = [{
 
 App.PROJECTS = [{
 	name: 'pinpoint',
-	description: "it's a chrome extension",
+	imgUrl: 'css/img/pinpoint.png',
+	description: "PinPoint is a Chrome extension that allows you to leave notes on a YouTube video. It saves you time by helping you remember what sections are important. Shut down your computer, come back to the video.. and your notes are still there! Clicking on a PinPoint takes you to that moment of the video. Simple UI and disappears when you mouse away from the video(fullscreen functionality).",
 	builtWith: 'javascript'
 },{
 	name: 'livehub',
-	description: "it's a site n stuff",
+	imgUrl: 'css/img/livehub.png',
+	description: "a social medium for musicians. Users can rate and review artists based on their past performances. Built with Ruby on Rails, jQuery, AJAX, Travis CI, Paperclip, RSpec, FactoryGirl, ActiveRecord, and Bootstrap.",
 	builtWith: "rails"
 }]
 

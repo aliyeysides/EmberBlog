@@ -93,11 +93,16 @@
   <script type="text/x-handlebars" id="projects">
     <h1>Projects</h1>
 
-    <ul>
     {{#each}}
-      <li>{{#link-to 'project' this class="mid-gray"}}{{name}}{{/link-to}}</li>
+    <div class="clearfix mb2">
+      <div>
+        <img {{bind-attr src=imgUrl}}/>
+      </div>
+      <div class="overflow-hidden">
+      <p>{{description}}</p>
+      </div>
+    </div>
     {{/each}}
-    </ul>
   </script>
 
   <script type="text/x-handlebars" id="project">
