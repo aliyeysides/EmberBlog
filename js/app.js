@@ -65,15 +65,25 @@ App.BLOGS = [{
 }];
 
 App.PROJECTS = [{
-	name: 'pinpoint',
+	name: 'Pinpoint',
 	imgUrl: 'css/img/pinpoint.png',
-	description: "PinPoint is a Chrome extension that allows you to leave notes on a YouTube video. It saves you time by helping you remember what sections are important. Shut down your computer, come back to the video.. and your notes are still there! Clicking on a PinPoint takes you to that moment of the video. Simple UI and disappears when you mouse away from the video(fullscreen functionality).",
-	builtWith: 'javascript'
+	deployUrl: "https://chrome.google.com/webstore/detail/pinpoint/khcfpddiephakfkdhfnbbdihopbdopam",
+	description: "PinPoint is a Chrome extension that allows you to leave notes on a YouTube video. It saves you time by helping you remember what sections are important. Shut down your computer, come back to the video.. and your notes are still there! Clicking on a PinPoint takes you to that moment of the video. Simple UI and disappears when you mouse away from the video(fullscreen functionality)."
 },{
-	name: 'livehub',
+	name: 'Livehub',
 	imgUrl: 'css/img/livehub.png',
-	description: "a social medium for musicians. Users can rate and review artists based on their past performances. Built with Ruby on Rails, jQuery, AJAX, Travis CI, Paperclip, RSpec, FactoryGirl, ActiveRecord, and Bootstrap.",
-	builtWith: "rails"
+	deployUrl: "https://github.com/aliyeysides/LiveHub",
+	description: "LiveHub is a social medium for musicians. Users can rate and review artists based on their past performances. Built with Ruby on Rails, jQuery, AJAX, Travis CI, Paperclip, RSpec, FactoryGirl, ActiveRecord, and Bootstrap."
+},{
+	name: 'BeaxIt',
+	imgUrl: 'css/img/beaxit.png',
+	deployUrl: 'http://beaxit.herokuapp.com/',
+	description: "BeaxIt allows you to search your favorite artists and create playlists. Built with Sinatra, Javascript, jQuery, AJAX, iTunes API, ActiveRecord, and Bootstrap."
+},{
+	name: 'Super-Working-Title',
+	imgUrl: 'css/img/swt.png',
+	deployUrl: 'http://wizardworld.herokuapp.com/',
+	description: "Super-Working-Title is a platformer game created from the JS Phaser engine. Inspired by Super Smash and Final Fantasy. Built with Sinatra, Javascript, and Phaser."
 }]
 
 // App.ABOUT = {
