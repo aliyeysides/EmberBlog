@@ -60,12 +60,12 @@
 
 
   <script type="text/x-handlebars" id="about">
-    <h1>About Me</h1>
+    <h1 class="center caps border-bottom blue">About Me</h1>
     <span class="mid-gray py2">about me yo</span>
   </script>
 
   <script type="text/x-handlebars" id="blogs">
-    <h1>Writing</h1>
+    <h1 class="center caps border-bottom blue">Writing</h1>
     <div>
       Recent Post:
         {{#link-to 'blog' recentBlog}}{{recentBlog}}{{/link-to}} "-" {{test}}
@@ -86,17 +86,17 @@
 
   <script type="text/x-handlebars" id="blog">
     <h1>{{title}}</h1>
-    <h3>{{title}}</h3>
     <p>{{body}}</p>
   </script>
 
   <script type="text/x-handlebars" id="projects">
-    <h1>Projects</h1>
+    <h1 class="center caps border-bottom blue">Projects</h1>
 
     {{#each}}
+    <h3 class="center caps">{{name}}</h3>
     <div class="clearfix mb2 border-bottom">
       <div>
-        <img {{bind-attr src=imgUrl}}/>
+        <center><img {{bind-attr src=imgUrl}}/></center>
       </div>
       <div class="overflow-hidden">
       <p>{{description}}</p>
@@ -104,12 +104,6 @@
       </div>
     </div>
     {{/each}}
-  </script>
-
-  <script type="text/x-handlebars" id="project">
-    {{name}}
-    {{description}}
-    {{builtWith}}
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
