@@ -6,4 +6,4 @@ In this blog I will showcase my resume, add my writing, and display the projects
 I will not be using ember-data for this repo because I wanted to wireframe before introducing data persistence. I will create another repo that will incorporate Rails as the JSON API along with the same front-end design found in this repo. 
 
 ## Front-End CSS
-For the front-end I will be using Brent Jackson's OOCSS library, BaseCSS. This application will be a SPA (single paged application).
+For the front-end I will be using Brent Jackson's OOCSS library, BaseCSS. This application will be an SPA (single paged application).
